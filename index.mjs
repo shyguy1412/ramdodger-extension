@@ -6,8 +6,6 @@ import fs from 'fs/promises';
 import RamDodger3000 from 'ramdodger3000';
 
 /**
- *  Enables ram dodging. This will require explicit 
- * 
  *  @type {import('esbuild-bitburner-plugin').PluginExtension}
  */
 export const RamDodgerExtension = {
@@ -25,7 +23,6 @@ export const RamDodgerExtension = {
 };
 
 /**
- * allows importing functions without incuring the static ram cost
  * @type {import('esbuild').Plugin}
  */
 export const UnsafePlugin = {
