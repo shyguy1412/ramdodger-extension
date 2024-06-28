@@ -1,6 +1,6 @@
 {
   "name": "ramdodger-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ram dodging extension for esbuild-bitburner-plugin",
   "main": "index.mjs",
   "type": "module",
