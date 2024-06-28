@@ -1,6 +1,7 @@
 import { generate } from 'astring';
-import { parse } from 'acorn';
+import { Parser } from 'acorn';
 import { ancestor } from 'acorn-walk';
+import { importAssertions } from 'acorn-import-assertions';
 import { transform } from 'esbuild';
 import fs from 'fs/promises';
 import RamDodger3000 from 'ramdodger3000';
@@ -33,7 +34,7 @@ export const UnsafePlugin = {
       if (opts.with.type == 'unsafe') {
         const file = await fs.readFile(opts.path, { encoding: 'utf8' });
         const { code } = await transform(file, { loader: 'tsx' });
-        const ast = parse(code, { ecmaVersion: 'latest', sourceType: 'module' });
+        const ast = Parser.extend(importAssertions).parse(code, { ecmaVersion: 'latest', sourceType: 'module' });
 
         ancestor(ast, {
           ExpressionStatement(node, state) {

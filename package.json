@@ -18,10 +18,11 @@
   },
   "homepage": "https://github.com/shyguy1412/ramdodger-extension#readme",
   "dependencies": {
-    "acorn": "^8.11.3",
-    "acorn-walk": "^8.3.2",
-    "esbuild": "^0.20.2",
-    "esbuild-bitburner-plugin": "^1.5.0",
+    "acorn": "^8.12.0",
+    "acorn-import-assertions": "^1.9.0",
+    "acorn-walk": "^8.3.3",
+    "esbuild": "^0.21.5",
+    "esbuild-bitburner-plugin": "^1.5.1",
     "ramdodger3000": "^1.0.3"
   }
 }
